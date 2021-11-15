@@ -72,7 +72,7 @@ REST_FRAMEWORK = {
     )
 }
 
-
+AUTH_USER_MODEL ='auth_example.User'
 ROOT_URLCONF = 'back_auth_axample.urls'
 
 TEMPLATES = [
@@ -99,8 +99,13 @@ WSGI_APPLICATION = 'back_auth_axample.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'auth_example',
+        'USER': 'jhonatan',
+        'PASSWORD': 'trenalnorte',
+        'HOST': 'localhost',
+        'PORT': '5432'
+
     }
 }
 
