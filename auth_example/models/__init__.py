@@ -1,2 +1,1 @@
-from .account import Account
-from .account import User
+from .user import User

@@ -27,6 +27,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     password    = models.CharField('Password',  max_length=256)
     name        = models.CharField('User',      max_length=50)
     email       = models.EmailField('Email',    max_length=100, unique=True)
+    age         = models.IntegerField('Age',default=0)
+    location    = models.TextField('Location', default='Colombia')
+    description = models.TextField(default="")
+
 
 
     def save(self, **kwargs):
